@@ -1,0 +1,28 @@
+<div class="container">
+
+    <form name="companyForm">
+      
+      <div class="form-group">
+          <label for="companyId">Company Id</label>
+          <input type="text" class="form-control" id="companyId" name="companyId" [(ngModel)]="formData.companyId" placeholder="Company ID">
+        </div>
+    
+      <div class="form-group">
+        <label for="companyName">Company Name</label>
+        <input type="text" class="form-control" id="companyName" name="companyName" [(ngModel)]="formData.companyName" placeholder="Company Name">
+      </div>
+    
+      <div class="form-group">
+        <label for="companyAdress">Company Adress</label>
+        <input type="text" class="form-control" id="companyAdress" name="companyAdress" [(ngModel)]="formData.companyAdress" placeholder="Company Adress">
+      </div>
+    
+      <div class="form-group">
+        <label for="companytype">Company Type</label>
+        <input type="text" class="form-control" id="companytype" name="companytype" [(ngModel)]="formData.companyType" placeholder="Company Type">
+      </div>
+      
+      <button type="submit" class="btn btn-primary" (click)="saveCompany()">SUBMIT</button>
+      
+    </form>
+    </div>
