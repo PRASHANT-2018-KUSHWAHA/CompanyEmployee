@@ -15,19 +15,27 @@ export class CompanyComponent implements OnInit {
 
   formData = {};
 
-  constructor(private _companyService : CompanyService, private _router:Router) { }
+  constructor(private _companyService : CompanyService,  private _router: Router) { }
 
   saveCompany(){
     console.log('this is fromData');
     console.log(this.formData);
     
-    this._companyService.saveNewCompany(this.formData).subscribe(function(data){
+    this._companyService.saveNewCompany(this.formData).subscribe((data)=>{
+      if(data){
       console.log(data);
-    
+      this._router.navigateByUrl('companyDetails'); 
       alert("Company Saved  :)");
+      }else{
+        console.log('data on success false component');
+        console.log(data);
+        alert(data.MSG);
+      }
     })
-    
+  
   }
+
+
   ngOnInit() {
   }
 

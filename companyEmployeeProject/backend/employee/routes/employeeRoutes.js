@@ -15,7 +15,7 @@ router.post('/saveNewEmployee',(req,res)=>{
     let employeeName = req.body.employeeName; 
     let employeeId = req.body.employeeId;
     let employeeAdress = req.body.employeeAdress;
-    let companyName = req.body.companyName;
+    let employeeCompany = req.body.employeeCompany;
     
 
     if(employeeName && employeeId){
@@ -25,7 +25,7 @@ router.post('/saveNewEmployee',(req,res)=>{
             employee_id:employeeId,
             employee_name: employeeName,
             employee_adress: employeeAdress,
-            company_name:companyName,
+            employee_company:employeeCompany,
         
         }
       console.log(record);

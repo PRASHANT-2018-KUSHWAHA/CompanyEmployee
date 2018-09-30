@@ -5,7 +5,7 @@ let newCompanySchema = Schema({
         type:String,
         required:true
     },
-    coampany_name:{
+    company_name:{
         type:String,
         required:false
     },
@@ -16,6 +16,10 @@ let newCompanySchema = Schema({
     company_type:{
        type:String,
        required:true
+    },
+    company_flag:{
+         type:Boolean,
+         required:false
     }
 
 });

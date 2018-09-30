@@ -25,14 +25,9 @@ let saveNewEmployee = (parameter) => {
 let fetchEmployeeDetails = ()=>{
     return new Promise((resolve, reject) => {
         employeeModel.find()
-        
             .exec()
             .then((EmployeeDetailsFromDB) => {
-
                 if (EmployeeDetailsFromDB) {
-                    console.log("this is from company operation file for fetching");
-                    console.log(EmployeeDetailsFromDB);
-                    
                     resolve(EmployeeDetailsFromDB);
                 }
             });

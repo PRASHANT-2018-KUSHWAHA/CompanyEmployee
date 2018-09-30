@@ -56,7 +56,6 @@ let companyController = require('../controller/companyController');
 
  router.post('/deleteCompany',(req,res)=>{
     console.log(req.params);
-    console.log(req.query);
     console.log(req.body);
     var id= req.body.params;
      companyController.deleteCompanyDetails(id).then(function(CompanyDetails){

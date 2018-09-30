@@ -14,11 +14,11 @@ let newEmployeeSchema = Schema({
         type:String,
         required:false
     },
-    company_name:{
+    employee_company:{
         type:String,
         required:false
     }
     
 });
 
-let employee = module.exports = mongoose.model('employee',newEmployeeSchema);
+let employee = module.exports = mongoose.model('Employee',newEmployeeSchema);

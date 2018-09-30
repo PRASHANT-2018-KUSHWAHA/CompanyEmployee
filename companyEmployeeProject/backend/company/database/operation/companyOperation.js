@@ -24,10 +24,13 @@ let saveNewCompany = (parameter) => {
 
 let fetchCompanyDetails = ()=>{
     return new Promise((resolve, reject) => {
-        companyModel.find()
+        companyModel.find({})
             .exec()
             .then((CompanyDetailsFromDB) => {
                 if (CompanyDetailsFromDB) {
+                    console.log("this is from company operation file for fetching");
+                    
+                    console.log(CompanyDetailsFromDB);
                     resolve(CompanyDetailsFromDB);
                 }
             });

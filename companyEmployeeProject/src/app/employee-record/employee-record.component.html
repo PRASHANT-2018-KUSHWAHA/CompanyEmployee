@@ -1,8 +1,12 @@
 <div class="container">
 
+  <div style="float:left;margin-bottom: 10px;margin-top: 10px;">
+    <button type="submit" class="btn btn-success"  routerLink="/employee">Back</button>
+  </div>
   <div style="float:right;margin-bottom: 10px;margin-top: 10px;">
     <button type="submit" class="btn btn-success" (click)="addEmployee()">Add employee</button>
   </div>
+
 
 <table class="table">
   <thead class="thead-light">
@@ -11,7 +15,8 @@
       <th scope="col">Employee Id</th>
       <th scope="col">Employee Name</th>
       <th scope="col">Employee Adress</th>
-      <th scope="col">Company Name</th>
+      <th scope="col">Employee Company</th>
+     
       <th scope="col">View employee</th>
       <th scope="col">Update employee</th>
       <th scope="col">Delete employee</th>
@@ -23,7 +28,8 @@
       <td>{{employee.employee_id}}</td>
       <td>{{employee.employee_name}}</td>
       <td>{{employee.employee_adress}}</td>
-      <td>{{employee.company_name}}</td>
+      <td>{{employee.employee_company}}</td>
+    
       <td style="text-align: center"><button type="submit" class="btn btn-primary" (click)="viewEmployee()">View</button></td>
       <td style="text-align: center"><button type="submit" class="btn btn-success" (click)="updateEmployee(employee)">Update</button></td>
       <td style="text-align: center"><button type="submit" class="btn btn-danger" (click)="deleteEmployee(i,employee)">Delete</button></td>

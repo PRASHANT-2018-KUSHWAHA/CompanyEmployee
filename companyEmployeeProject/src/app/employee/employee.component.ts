@@ -15,16 +15,22 @@ export class EmployeeComponent implements OnInit {
 
   formData = {};
 
-  constructor(private _employeeService : EmployeeService, private _router:Router) { }
+  constructor(private _employeeService : EmployeeService, private _router: Router) { }
 
   saveEmployee(){
     console.log('this is fromData');
     console.log(this.formData);
     
-    this._employeeService.saveNewEmployee(this.formData).subscribe(function(data){
-      console.log(data);
-    
-      alert("Company Saved  :)");
+    this._employeeService.saveNewEmployee(this.formData).subscribe((data)=>{
+      if(data){
+        console.log(data);
+        this._router.navigateByUrl('employeeDetails');
+        alert("Employee Details Saved  :)");
+      }else{
+        console.log('data on success false component');
+        console.log(data);
+        alert(data.MSG);
+      }
     })
   }
   ngOnInit() {

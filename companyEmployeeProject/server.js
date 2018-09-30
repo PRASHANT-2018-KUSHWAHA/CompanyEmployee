@@ -13,7 +13,7 @@ let path = require('path');
 let config = require('./config/config');
 let Company = require('./backend/company/routes/companyRoutes');
 let Employee = require('./backend/employee/routes/employeeRoutes');
-
+let Home = require('./backend/home/routes/homeRoutes');
 /**
  * ExpressJs function instance
  */
@@ -34,6 +34,8 @@ let Employee = require('./backend/employee/routes/employeeRoutes');
   */
  app.use('/employee',Employee);
  app.use('/company',Company);
+ app.use('/home',Home);
+
 
 
  //This is the Default Route for Angular 6
